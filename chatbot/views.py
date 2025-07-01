@@ -10,12 +10,12 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def ask_openai(message):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": message}
         ],
-        max_tokens=150,
+        max_tokens=500,
         temperature=0.7,
         n=1,
     )
